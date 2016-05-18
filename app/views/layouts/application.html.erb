@@ -2,19 +2,20 @@
 <html>
 <head>
   <title>Hilcom</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/jquery.fullPage.css" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-	<ul>
-		  <li><%= link_to "CONTACT", "/contacts/index" %></li>
-		  <li><%= link_to "CLIENTS", "/clients/index" %></li>
-		  <li><%= link_to "ABOUT", "/abouts/index" %></li>
-	</ul>
+	
 
 <%= yield %>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.9/vendors/jquery.slimscroll.js"></script>
+  <!-- <script type="text/javascript" src="jquery.fullPage.js"></script> -->
 
 </body>
 </html>

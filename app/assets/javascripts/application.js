@@ -13,4 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require fullpage
 //= require_tree .
+
+$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#8FB98B', '#DE564B', '#EAE1C0'],
+				slidesNavigation: true,
+			});
+		});
