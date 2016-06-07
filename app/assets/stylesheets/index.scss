@@ -4,16 +4,87 @@
 
 
 $color_bright_sun_approx: #fbd13e;
-$background_image: url(http://res.cloudinary.com/estufas/image/upload/c_scale,w_1200/v1463352546/MN_Hilcom_Home_background_h1ojja.png);
+$background_image1: url(http://res.cloudinary.com/estufas/image/upload/c_scale,w_1200/v1463352546/MN_Hilcom_Home_background_h1ojja.png);
+$background_image2: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/unslpash-desert-road_uvsq5s.png);
+$background_image3: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/stocksnap-free-stock-photos1.jpg);
+$background_image4: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/yellow-taxi_vvvjao.png);
+$background_image5: url(https://bootstrapbay.com/blog/wp-content/uploads/2014/05/SplitShire_air_balloons_gma6ks.jpg);
 
 
-html, body {
+//colors
+$color_heavy_metal_approx: #263729;
+$color_tabasco_approx: #992213;
+$color_atoll_approx: #0c717a;
+$color_japanese_laurel_approx: #009900;
+$blue: #0000ff;
+$white: #fff;
+$red: red;
+
+//@extend-elements
+//original selectors
+//html, body
+%extend_1 {
 	height: 100%;
-  margin: 0;
-    //background-image: $background_image;
-    //background-size: 75% auto;
-    //background-repeat: no-repeat;
-    //background-position: center; 
+	margin: 0;
+	overflow-x: hidden;
+	position: relative;
+}
+
+
+html {
+	@extend %extend_1;
+}
+body {
+	@extend %extend_1;
+}
+nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+}
+.main-wraper {
+	height: 90%;
+
+}
+.wrapper {
+	height: 95%;
+	width: 95%;
+	background-color: $white
+	}
+.page {
+	float: left;
+	background: $white;
+	min-height: 100%;
+	padding-top: 30px;
+}
+#page-1 {
+	background-image: $background_image1;
+  background-size: 69%;
+  background-repeat: no-repeat;
+  background-position: center;
+  .future-background {
+  min-height: 100%;
+  min-width: 100%
+  } 
+}
+#page-2 {
+	background-image: $background_image1;
+  background-size: 69%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#page-3 {
+	background-image: $background_image1;
+  background-size: 69%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+a {
+	color: $white;
+	&.selected {
+		color: $red;
+	}
 }
 //colors
 $white: #fff;
@@ -67,23 +138,8 @@ li {
 	}
 }
 
-.flex-container {
-  padding: 0;
-	background-image: $background_image;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center; 
-  margin-left: 12%;
-  margin-right: 17.5%;
-  min-height: 100%; 
-  list-style: none;
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
-  -webkit-flex-flow: row wrap;
-  justify-content: space-around;
+.flex-container1 {	
+  height: 100%;
+  width: 100%;
+  justify-content: center;
 }
